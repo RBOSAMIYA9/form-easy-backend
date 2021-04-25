@@ -2,7 +2,7 @@ const express = require('express');
 const dbData = require('./firebase')
 // const partialPath = path.join(__dirname, "/templates/partials");
 
-const PORT = 3000 || process.env.PORT
+
 const app = express()
 app.use(express.urlencoded());
 app.use(express.json());
@@ -154,7 +154,7 @@ app.post('/reply', function (req, res) {
 })
 
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT || 3000, () => {
     console.log("app is running on port", PORT);
 })
 
