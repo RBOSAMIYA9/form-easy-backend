@@ -137,11 +137,11 @@ app.post('/reply', function (req, res) {
         });
     } else if ((req.body.message) == '2') {
         res.json({
-            reply: 'Choice 2 \n You have selected *PAN Card*. \nFor more details Click on the link given below: 👇\n' + fullUrl + '/panCard' + req.body.sender
+            reply: 'Choice 2 \n You have selected *PAN Card*. \nFor more details Click on the link given below: 👇\n' + fullUrl + '/panCard/' + req.body.sender
         });
     } else if ((req.body.message) == '3') {
         res.json({
-            reply: 'Choice 3 \n You have selected *Voter Card*. \nFor more details Click on the link given below: 👇\n' + fullUrl + '/voterId' + req.body.sender
+            reply: 'Choice 3 \n You have selected *Voter Card*. \nFor more details Click on the link given below: 👇\n' + fullUrl + '/voterId/' + req.body.sender
         });
     }
     // else{
